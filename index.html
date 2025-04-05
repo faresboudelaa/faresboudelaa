@@ -2,64 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fares Boudelaa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fares Boudelaa – Projects</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
+      margin: 0;
       padding: 2rem;
-    }
-
-    .container {
-      max-width: 600px;
+      background: #f0f2f5;
+      color: #333;
+      text-align: center;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      padding: 1rem 0;
     }
 
-    a {
-      display: inline-block;
-      margin: 0.25rem;
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 80%;
+      max-width: 500px;
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      scroll-snap-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+    }
+
+    .buttons a {
+      margin: 0.5rem;
       padding: 0.5rem 1rem;
       background: #007acc;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      transition: 0.2s ease;
-    }
-
-    a:hover {
-      background: #005fa3;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Fares Boudelaa</h1>
-    <p>This website is a work in progress. More coming soon</p>
-    <p>AI & Data Science @ Institut Polytechnique de Paris</p>
-    <a href="https://github.com/faresboudelaa" target="_blank">GitHub</a>
-    <a href="mailto:faresboudelaa@gmail.com">Contact Me</a>
+
+  <h1>Fares Boudelaa</h1>
+  <p>AI & Data Science @ Institut Polytechnique de Paris</p>
+
+  <div class="carousel">
+    <div class="card">
+      <h3>Sub-event Detection in Twitter Streams</h3>
+      <a href="#">View Project</a>
+    </div>
+    <div class="card">
+      <h3>Actor-Critic Deep RL Comparative Study</h3>
+      <a href="#">View Project</a>
+    </div>
+    <div class="card">
+      <h3>SLM Fine-Tuning for Summarization</h3>
+      <a href="#">View Project</a>
+    </div>
+    <div class="card">
+      <h3>Child Face Synthesis from Parents</h3>
+      <a href="#">View Project</a>
+    </div>
+    <div class="card">
+      <h3>Interactive Stock Dashboard</h3>
+      <a href="#">View Project</a>
+    </div>
   </div>
+
+  <div class="buttons">
+    <a href="https://github.com/faresboudelaa" target="_blank">GitHub</a>
+    <a href="mailto:your.email@example.com">Contact</a>
+  </div>
+
 </body>
 </html>
